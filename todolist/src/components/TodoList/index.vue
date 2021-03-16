@@ -5,9 +5,9 @@
     </div>
 </template>
 
-<script>
-    import TodoItem from "@/components/TodoList/TodoItem.vue"
-import { defineComponent } from "vue"
+<script lang="ts">
+    import TodoItem from "./TodoItem.vue"
+    import { defineComponent } from "vue"
     export default defineComponent({
         name: "Todo-List",
         components: {
