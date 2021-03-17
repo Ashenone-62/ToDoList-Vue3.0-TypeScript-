@@ -15,7 +15,7 @@
     >删除</button>
 
     <button
-      @click="setStatus(item.id)" 
+      @click="setDoing(item.id)" 
       v-if="item.status !== FINISHED"
       :class="item.status === DOING ? 'doing' : 'willdo'"
     >
