@@ -40,25 +40,30 @@ export default defineComponent( {
       item: Object as PropType<ITodo>
     },
     setup(props, { emit }){
+      // 枚举的使用方法
       const statusState: IStatusState = {
         DOING: TODO_STATUS.DOING,
         WILLDO: TODO_STATUS.WILLDO,
         FINISHED: TODO_STATUS.FINISHED
       }
 
+      // 调用父组件上的removeTodo
       const removeTodo = (id: number): void => {
         emit('removeTodo',id)
       }
 
+      // 调用父组件上的setStatus
       const setStatus = (id: number): void => {
         emit('setStatus',id)
       }
 
+      // 调用父组件上的setDoing
       const setDoing = (id: number): void => {
         emit('setDoing',id)
       }
 
       return{
+        // 展开statusState
         ...statusState,
         removeTodo,
         setDoing,

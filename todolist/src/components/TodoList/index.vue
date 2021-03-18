@@ -20,12 +20,14 @@ import { IuseTodo, useTodo } from "../../hooks"
     export default defineComponent({
         name: "Todo-List",
         props:{
+            // 断言注解传入参数
             todoList: Array as PropType<ITodo[]>
         },
         components: {
             TodoItem
         },
         setup(){
+            // 解构拿到方法
             const { removeTodo, setStatus, setDoing }: IuseTodo = useTodo(); 
         
             return {
